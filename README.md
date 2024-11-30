@@ -124,3 +124,12 @@ export default CounterApp;
 - Styling:
 
   - Inline styles (or libraries like CSS Modules) allow scoped styles for each component, avoiding global CSS conflicts.
+
+### Start the Development Server
+
+In the terminal, start the React app:
+
+```bash
+npm start
+```
+Open your app in a browser at `http://localhost:3000`.
