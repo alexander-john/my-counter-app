@@ -4,7 +4,7 @@
 
 Here, we manually manipulate the DOM to update the UI:
 
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,22 +68,31 @@ Here, we manually manipulate the DOM to update the UI:
 Now, let's use React to achieve the same functionality.
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function CounterApp() {
   // State to track the counter
   const [count, setCount] = useState(0);
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <div style={{ fontSize: '24px', margin: '20px' }}>{count}</div>
-      <button onClick={() => setCount(count + 1)} style={{ margin: '5px', padding: '10px', fontSize: '16px' }}>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <div style={{ fontSize: "24px", margin: "20px" }}>{count}</div>
+      <button
+        onClick={() => setCount(count + 1)}
+        style={{ margin: "5px", padding: "10px", fontSize: "16px" }}
+      >
         Increment
       </button>
-      <button onClick={() => setCount(count - 1)} style={{ margin: '5px', padding: '10px', fontSize: '16px' }}>
+      <button
+        onClick={() => setCount(count - 1)}
+        style={{ margin: "5px", padding: "10px", fontSize: "16px" }}
+      >
         Decrement
       </button>
-      <button onClick={() => setCount(0)} style={{ margin: '5px', padding: '10px', fontSize: '16px' }}>
+      <button
+        onClick={() => setCount(0)}
+        style={{ margin: "5px", padding: "10px", fontSize: "16px" }}
+      >
         Reset
       </button>
     </div>
@@ -94,23 +103,24 @@ export default CounterApp;
 ```
 
 ### Benefits of Using React:
+
 - Declarative UI Updates:
 
-    - In React, you describe what the UI should look like when the state changes, and React takes care of updating the DOM. This eliminates manual DOM manipulation.
-    - Example: setCount(count + 1) automatically re-renders the UI.
+  - In React, you describe what the UI should look like when the state changes, and React takes care of updating the DOM. This eliminates manual DOM manipulation.
+  - Example: setCount(count + 1) automatically re-renders the UI.
 
 - State Management:
 
-    - React's useState hook manages the state of the counter. If the app grows (e.g., with multiple counters), managing state remains straightforward.
+  - React's useState hook manages the state of the counter. If the app grows (e.g., with multiple counters), managing state remains straightforward.
 
 - Reusability:
 
-    - You can encapsulate the counter logic in a reusable CounterApp component. To add another counter, you just render <CounterApp /> again.
+  - You can encapsulate the counter logic in a reusable CounterApp component. To add another counter, you just render <CounterApp /> again.
 
 - Scalability:
 
-    - React’s component-based structure makes it easier to split the app into smaller, manageable pieces. Adding new features (e.g., multiple counters, a total count) becomes more maintainable.
+  - React’s component-based structure makes it easier to split the app into smaller, manageable pieces. Adding new features (e.g., multiple counters, a total count) becomes more maintainable.
 
 - Styling:
 
-    - Inline styles (or libraries like CSS Modules) allow scoped styles for each component, avoiding global CSS conflicts.
+  - Inline styles (or libraries like CSS Modules) allow scoped styles for each component, avoiding global CSS conflicts.
